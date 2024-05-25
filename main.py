@@ -8,9 +8,9 @@ from numpy.linalg import norm
 def find_most_similar(needle, haystack):
     needle_norm = norm(needle)
     similarity_scores = [
-        np.dot(needle, item)/(needle_norm * norm(item)) for item in haystack
+        np.dot(needle, item) / (needle_norm * norm(item)) for item in haystack
     ]
-    return sorted(zip(similarity_scores, range(len(haystack))), reverse=True) 
+    return sorted(zip(similarity_scores, range(len(haystack))), reverse=True)
 def save_embedding(path, embeddings):
     if not os.path.exists("embeddings"):
         os.makedirs("embeddings")
