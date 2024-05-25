@@ -31,7 +31,7 @@ def main():
     paragraphs = parse_book(filename)
     embeddings = create_embedding(filename, "snowflake-arctic-embed", paragraphs)
     prompt = "Give me 15 key take aways from the book"
-    prompt_embed = ollama.embeddings(model='snowflake-arctice-embed', prompt=prompt)['embedding']
+    prompt_embed = ollama.embeddings(model='snowflake-arctic-embed', prompt=prompt)['embedding']
     most_similar_chunk = find_most_similar(prompt_embed, embeddings)[:5]
     for item in most_similar_chunk:
         print(item[0], paragraphs[item[1]])
