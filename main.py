@@ -10,9 +10,9 @@ def save_embedding(path, embeddings):
     with open(f"embeddings/{path}.json", "w") as f:
         json.dump(embeddings, f)
 def load_embedding(path):
-    if not os.path.exists(f"embeddings/{filename}.json"):
+    if not os.path.exists(f"embeddings/{path}.json"):
         return False
-    with open(f"embeddings/{filename}.json", "r") as f:
+    with open(f"embeddings/{path}.json", "r") as f:
         return json.load(f)
 def create_embedding(filepath, model_id, chunks):
     if (embeddings := load_embedding(filepath)) is not False:
