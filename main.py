@@ -2,6 +2,8 @@ import ollama
 from read_epub import parse_book
 import os
 import json
+import numpy as np
+from numpy.linalg import norm
 
 def find_most_similar(needle, haystack):
     needle_norm = norm(needle)
