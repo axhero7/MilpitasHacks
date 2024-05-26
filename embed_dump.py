@@ -7,7 +7,7 @@ import time
 def get_epub(dir):
     return [file for file in os.listdir(dir) if file.endswith('.epub') ]
 
-def load_embed(epub_extension, modelname="mistral"):
+def load_embed(epub_extension, modelname="snowflake-arctic-embed"):
     # print("epubs: ", len(epub_extension))
     # print("all epubs", epub_extension)
     chunks=[]
