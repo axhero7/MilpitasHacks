@@ -86,5 +86,5 @@ def create_request(prompt, book_isbn):
 
 if __name__ == "__main__":
     for i in range(5):
-        create_request(input("What do you want to know?"), "James Clear - Atomic Habits_ Tiny Changes, Remarkable Results-Penguin Publishing Group (2018)")
+        print(create_request(input("What do you want to know?"), "James Clear - Atomic Habits_ Tiny Changes, Remarkable Results-Penguin Publishing Group (2018)"))
     
