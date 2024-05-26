@@ -19,3 +19,5 @@ def load_embed(epub_extension, modelname="mistral"):
 def main():
     load_embed(get_epub('.'))
 
+if __name__ == "__main__.py":
+    main()
