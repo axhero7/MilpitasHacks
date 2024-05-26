@@ -1,6 +1,8 @@
 import os
 import json
 from read_epub import parse_book
+print("hello")
+
 
 def get_epub(dir):
     return [file.endswith('.epub') for file in os.listdir(dir)]
