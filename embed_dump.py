@@ -9,7 +9,7 @@ def get_epub(dir):
 
 def load_embed(epub_extension, modelname="mistral"):
     print("epubs: ", len(epub_extension))
-    print("all epubs", epub_extension))
+    print("all epubs", epub_extension)
     for filename in epub_extension:
         t1 = time.time()
         print("cur", filename")
