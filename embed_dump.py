@@ -12,7 +12,7 @@ def load_embed(epub_extension, modelname="mistral"):
     print("all epubs", epub_extension)
     for filename in epub_extension:
         t1 = time.time()
-        print("cur", filename")
+        print("cur", filename)
         if not os.path.exists(f"embeddings/{filename}.json"):
             chunks = parse_book(filename)
             # print("chunks: ", len(chunks))
