@@ -4,7 +4,7 @@ from read_epub import parse_book
 
 
 def get_epub(dir):
-    return [file.endswith('.epub') for file in os.listdir(dir)]
+    return [file for file in os.listdir(dir) if file.endswith('.epub') ]
 
 def load_embed(epub_extension, modelname="mistral"):
     print("epubs: ", len(epub_extension))
