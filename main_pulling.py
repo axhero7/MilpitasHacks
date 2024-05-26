@@ -81,7 +81,7 @@ def create_request(prompt, book_isbn):
     )
     # print("\n\n")
     # print(response["message"]["content"])
-return response["message"]["content"]
+    return response["message"]["content"]
 
 
 if __name__ == "__main__":
