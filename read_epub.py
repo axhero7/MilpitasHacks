@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 def parse_book(filename):
 #filename = "batman_test.epub"
-    book = epub.read_epub(filename)
+    book = epub.read_epub(filename,  {"ignore_ncx": True})
     items = list(book.get_items_of_type(ebooklib.ITEM_DOCUMENT))
 
     full_book = []
