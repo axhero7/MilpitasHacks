@@ -11,7 +11,7 @@ def load_embed(epub_extension, modelname="mistral"):
     for filename in epub_extension:
         if not os.path.exists(f"embeddings/{filename}.json"):
             chunks = parse_book(filename)
-            print("chunks: " + len(chunks))
+            print("chunks: ", len(chunks))
             emeddings= [ ollama.embeddings(model=modelname, prompt=chunk)["embedding"] for chunk in chunks]
             print("embeddings: ", len(embeddings))
             with open(f"embeddings/{filename}.json", "w") as f:
