@@ -8,8 +8,9 @@ def get_epub(dir):
     return [file for file in os.listdir(dir) if file.endswith('.epub') ]
 
 def load_embed(epub_extension, modelname="mistral"):
-    print("epubs: ", len(epub_extension))
-    print("all epubs", epub_extension)
+    # print("epubs: ", len(epub_extension))
+    # print("all epubs", epub_extension)
+    chunks=[]
     for filename in epub_extension:
         t1 = time.time()
         print("cur", filename)
