@@ -55,7 +55,7 @@ def main():
         Context:
     """
     # open file
-    filename = "Ryan Holiday - The Obstacle Is the Way_ The Timeless Art of Turning Trials into Triumph-Portfolio (2014).epub"
+    filename = "Wiley_Psychology__Pop_Culture_Travis_Langley_Dennis_ONeil_Michael_Uslan_-_Batman_and_Psychology__A_Dark_and_Stormy_Knight-Wiley_2012.epub"
     paragraphs = parse_book(filename)
 
     embeddings = get_embeddings(filename, "snowflake-arctic-embed", paragraphs)
