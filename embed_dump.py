@@ -1,4 +1,5 @@
 import os
+import ollama
 import json
 from read_epub import parse_book
 
