@@ -2,7 +2,7 @@ import os
 import ollama
 import json
 from read_epub import parse_book
-
+import time
 
 def get_epub(dir):
     return [file for file in os.listdir(dir) if file.endswith('.epub') ]
@@ -10,13 +10,16 @@ def get_epub(dir):
 def load_embed(epub_extension, modelname="mistral"):
     print("epubs: ", len(epub_extension))
     for filename in epub_extension:
+        t1 = time.time()
         if not os.path.exists(f"embeddings/{filename}.json"):
             chunks = parse_book(filename)
-            print("chunks: ", len(chunks))
-            emeddings= [ ollama.embeddings(model=modelname, prompt=chunk)["embedding"] for chunk in chunks]
-            print("embeddings: ", len(embeddings))
+            # print("chunks: ", len(chunks))
+            embeddings= [ ollama.embeddings(model=modelname, prompt=chunk)["embedding"] for chunk in chunks]
+            # print("embeddings: ", len(embeddings))
             with open(f"embeddings/{filename}.json", "w") as f:
                 json.dump(embeddings, f)
+        t2 = time.time()
+        print(f"{filename} with {len(chunks)} took {t2-t1} seconds")
 def main():
     load_embed(get_epub('.'))
 
