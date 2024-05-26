@@ -85,4 +85,6 @@ return response["message"]["content"]
 
 
 if __name__ == "__main__":
-    main()
+    for i in range(5):
+        create_request(input("What do you want to know?", "James Clear - Atomic Habits_ Tiny Changes, Remarkable Results-Penguin Publishing Group (2018)")
+    
